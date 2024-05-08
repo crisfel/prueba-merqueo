@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property mixed $tournament_id
  * @property mixed $id
+ * @method static where(array $array)
+ * @method static selectRaw(string $string)
  */
 class Game extends Model
 {
@@ -18,4 +20,9 @@ class Game extends Model
         'team_id'
     ];
 
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }

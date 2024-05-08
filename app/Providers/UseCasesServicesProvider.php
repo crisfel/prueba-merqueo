@@ -4,11 +4,15 @@ namespace App\Providers;
 
 use App\Repositories\Contracts\Users\UserRepositoryInterface;
 use App\Repositories\Users\UserRepository;
+use App\UseCases\Contracts\Games\FindWinnerTeamUseCaseInterface;
 use App\UseCases\Contracts\Players\SaveIMGPlayerUseCaseInterface;
 use App\UseCases\Contracts\Teams\SaveIMGTeamUseCaseInterface;
+use App\UseCases\Contracts\Tournaments\GetWinnerTournamentUseCaseInterface;
 use App\UseCases\Contracts\Tournaments\SimulateTournamentUseCaseInterface;
+use App\UseCases\Games\FindWinnerTeamUseCase;
 use App\UseCases\Players\SaveIMGPlayerUseCase;
 use App\UseCases\Teams\SaveIMGTeamUseCase;
+use App\UseCases\Tournaments\GetWinnerTournamentUseCase;
 use App\UseCases\Tournaments\SimulateTournamentUseCase;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,7 +25,9 @@ class UseCasesServicesProvider extends ServiceProvider
     protected array $classes = [
         SaveIMGTeamUseCaseInterface::class => SaveIMGTeamUseCase::class,
         SaveIMGPlayerUseCaseInterface::class => SaveIMGPlayerUseCase::class,
-        SimulateTournamentUseCaseInterface::class => SimulateTournamentUseCase::class
+        SimulateTournamentUseCaseInterface::class => SimulateTournamentUseCase::class,
+        FindWinnerTeamUseCaseInterface::class => FindWinnerTeamUseCase::class,
+        GetWinnerTournamentUseCaseInterface::class => GetWinnerTournamentUseCase::class
         ];
 
 

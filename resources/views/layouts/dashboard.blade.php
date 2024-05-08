@@ -54,6 +54,7 @@
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
+                    <!--
                     <a class="nav-link" href="index.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-file-download"></i></div>
                         Importar Equipos
@@ -62,6 +63,7 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-file-download"></i></div>
                         Importar Jugadores
                     </a>
+                    -->
                     <a class="nav-link" href="{{route('teams.show-all')}}">
                         <div class="sb-nav-link-icon"><i class="fas fa-arrow-right"></i></div>
                         Equipos
